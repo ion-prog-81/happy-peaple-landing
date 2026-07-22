@@ -87,6 +87,7 @@ section{padding:100px 0}
 .app-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
 .app-card:hover img{transform:scale(1.05)}
 .app-card .label{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-family:var(--font-display);font-weight:600;font-size:.9rem}
+.app-card{background-size:cover !important;background-position:center !important}
 .app-card .arrow{position:absolute;top:16px;right:16px;width:36px;height:36px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;transition:all .3s var(--ease)}
 .app-card:hover .arrow{background:var(--lime);color:var(--forest)}
 @media(max-width:768px){.app-grid{grid-template-columns:repeat(2,1fr);gap:12px}.app-card{height:160px}}
@@ -256,12 +257,12 @@ section{padding:100px 0}
     <h2 class="section-title reveal">Where pea protein works</h2>
     <p class="section-sub reveal">Explore how our ingredients perform across categories — click each application to see what we offer.</p>
     <div class="app-grid">
-      <a href="app-meat.html" class="app-card reveal" style="background:linear-gradient(135deg,#194836,#0f2e1f)"><span class="card-icon">🌱</span><div class="label">Plant-Based Meat</div><div class="arrow">→</div></a>
-      <a href="app-beverages.html" class="app-card reveal" style="background:linear-gradient(135deg,#4a8c5c,#2d6a3e)"><span class="card-icon">🥤</span><div class="label">Beverages & RTD</div><div class="arrow">→</div></a>
-      <a href="app-dairy.html" class="app-card reveal" style="background:linear-gradient(135deg,#6a9e6e,#4a7c59)"><span class="card-icon">🧀</span><div class="label">Dairy Alternatives</div><div class="arrow">→</div></a>
-      <a href="app-snacks.html" class="app-card reveal" style="background:linear-gradient(135deg,#707B52,#5a6342)"><span class="card-icon">🍪</span><div class="label">Snacks & Bakery</div><div class="arrow">→</div></a>
-      <a href="app-sports.html" class="app-card reveal" style="background:linear-gradient(135deg,#194836,#0f2e1f)"><span class="card-icon">💪</span><div class="label">Sports Nutrition</div><div class="arrow">→</div></a>
-      <a href="app-feed.html" class="app-card reveal" style="background:linear-gradient(135deg,#707B52,#5a6342)"><span class="card-icon">🐟</span><div class="label">Feed & Pet Food</div><div class="arrow">→</div></a>
+      <a href="app-meat.html" class="app-card reveal" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(https://images.unsplash.com/photo-photo-1588168333986-5078d3ae3976?w=400&q=80);background-size:cover;background-position:center">
+      <a href="app-beverages.html" class="app-card reveal" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(https://images.unsplash.com/photo-photo-1527661591475-527312dd65f5?w=400&q=80);background-size:cover;background-position:center">
+      <a href="app-dairy.html" class="app-card reveal" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(https://images.unsplash.com/photo-photo-1550583724-b2692b85b150?w=400&q=80);background-size:cover;background-position:center">
+      <a href="app-snacks.html" class="app-card reveal" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(https://images.unsplash.com/photo-photo-1590086782957-93c06ef21604?w=400&q=80);background-size:cover;background-position:center">
+      <a href="app-sports.html" class="app-card reveal" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(https://images.unsplash.com/photo-photo-1571019614242-c5c5dee9f50b?w=400&q=80);background-size:cover;background-position:center">
+      <a href="app-feed.html" class="app-card reveal" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6)),url(https://images.unsplash.com/photo-photo-1589923188900-85dae523342b?w=400&q=80);background-size:cover;background-position:center">
     </div>
   </div>
 </section>
@@ -330,7 +331,7 @@ section{padding:100px 0}
         </form>
       </div>
       <div class="contact-image reveal">
-        <div style="background:var(--forest);height:300px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--lime)">🤝</div>
+        <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?w=600&q=80" alt="Business meeting" loading="lazy" style="width:100%;border-radius:var(--radius);object-fit:cover;max-height:400px">
       </div>
     </div>
   </div>
