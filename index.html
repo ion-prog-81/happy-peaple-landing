@@ -3,205 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Peaple — Premium Pea Protein Ingredients</title>
-    <meta name="description" content="Happy Peaple by Trinitee Partnerships — premium pea protein isolate, starch, fiber and hydrolyzed protein from China. B2B supply for food manufacturers in Asia.">
+    <title>Happy Peaple — premium reliability made simple</title>
+    <meta name="description" content="Happy Peaple by Trinitee Partnerships — premium pea protein ingredients. Pea Protein 80/85, starch, fiber and hydrolyzed protein. Manufacturer in China, supplied globally.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #1a1a2e; background: #fafaf5; line-height: 1.6; }
         
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        :root {
+            --cream: #F0EDE2;
+            --forest: #194836;
+            --sage: #707B52;
+            --lime: #B9D48B;
+            --white: #FFFFFF;
+            --dark: #1A1A1A;
+            --text: #2C2C2C;
+            --text-light: #6B6B6B;
+            --font: 'Montserrat', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            font-family: var(--font);
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-        /* Hero */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+        /* === BLOB === */
+        .blob-bg {
+            position: fixed; top: -20%; right: -10%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(185,212,139,0.25) 0%, transparent 70%);
+            border-radius: 50%; pointer-events: none; z-index: 0;
+        }
+        .blob-bg-2 {
+            position: fixed; bottom: -10%; left: -10%; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(112,123,82,0.15) 0%, transparent 70%);
+            border-radius: 50%; pointer-events: none; z-index: 0;
+        }
+
+        /* === HEADER === */
+        .header {
+            position: relative; z-index: 1; padding: 24px 0 20px;
+            border-bottom: 1px solid rgba(25,72,54,0.08);
+        }
+        .header .container { display: flex; align-items: center; justify-content: space-between; }
+        .header-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .header-logo img { height: 44px; width: auto; }
+        .header-logo-text { font-weight: 700; font-size: 1.2rem; color: var(--forest); letter-spacing: -0.3px; }
+        .header-logo-text small { display: block; font-weight: 400; font-size: 0.65rem; color: var(--text-light); letter-spacing: 0.5px; margin-top: -2px; }
+        .header-nav { display: flex; gap: 32px; align-items: center; }
+        .header-nav a { text-decoration: none; color: var(--text); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+        .header-nav a:hover { color: var(--forest); }
+
+        /* === HERO === */
         .hero {
-            background: linear-gradient(135deg, #4a7c59 0%, #2d5a3e 50%, #1a3a2e 100%);
-            color: #fff; padding: 80px 0 60px; position: relative; overflow: hidden;
+            position: relative; z-index: 1; padding: 80px 0 60px;
+            display: flex; align-items: center; min-height: 70vh;
         }
-        .hero::before {
-            content: ''; position: absolute; top: -50%; right: -20%;
-            width: 600px; height: 600px; background: rgba(255,255,255,0.03);
-            border-radius: 50%;
+        .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero h1 {
+            font-size: 3.2rem; font-weight: 900; line-height: 1.05; color: var(--forest);
+            letter-spacing: -1px; margin-bottom: 16px;
         }
-        .hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
-        .hero h1 span { color: #a8e6a1; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin-bottom: 32px; }
-        .hero-tag { display: inline-block; background: rgba(255,255,255,0.15); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 24px; letter-spacing: 0.5px; }
+        .hero h1 .happy { display: block; }
+        .hero h1 .peaple { display: block; }
+        .hero .tagline { font-size: 1.1rem; color: var(--text-light); font-weight: 400; margin-bottom: 32px; max-width: 480px; }
+        .hero .sub-text { font-size: 0.9rem; color: var(--text-light); margin-top: 20px; line-height: 1.5; }
+        
+        .hero-right { position: relative; }
+        .hero-right img { width: 100%; max-width: 400px; margin: 0 auto; display: block; }
+        .hero-right .blob-accent {
+            position: absolute; top: -20px; right: -20px; width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(185,212,139,0.3) 0%, transparent 70%);
+            border-radius: 50%; z-index: -1;
+        }
 
-        .btn { display: inline-block; padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none; cursor: pointer; border: none; transition: all 0.2s; }
-        .btn-primary { background: #a8e6a1; color: #1a3a2e; }
-        .btn-primary:hover { background: #8cd485; transform: translateY(-1px); }
-        .btn-outline { border: 2px solid rgba(255,255,255,0.6); color: #fff; background: transparent; }
-        .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+        .btn { display: inline-block; padding: 14px 36px; border-radius: 50px; font-weight: 600; 
+               font-size: 0.9rem; text-decoration: none; transition: all 0.25s; font-family: var(--font);
+               letter-spacing: 0.3px; border: none; cursor: pointer; }
+        .btn-primary { background: var(--forest); color: var(--white); }
+        .btn-primary:hover { background: #0f2e1f; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(25,72,54,0.25); }
+        .btn-outline { border: 2px solid var(--forest); color: var(--forest); background: transparent; }
+        .btn-outline:hover { background: var(--forest); color: var(--white); }
 
-        /* Sections */
-        section { padding: 80px 0; }
-        .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 16px; }
-        .section-subtitle { color: #666; font-size: 1.1rem; margin-bottom: 48px; max-width: 700px; }
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
 
-        /* Products */
-        .bg-light { background: #f0f5f0; }
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        /* === SECTION === */
+        section { position: relative; z-index: 1; padding: 80px 0; }
+        .section-label { font-size: 0.75rem; font-weight: 600; color: var(--forest); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+        .section-title { font-size: 2rem; font-weight: 800; color: var(--forest); margin-bottom: 12px; letter-spacing: -0.5px; }
+        .section-subtitle { font-size: 1rem; color: var(--text-light); max-width: 600px; margin-bottom: 48px; }
+
+        /* === PRODUCTS === */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
         .product-card {
-            background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-            transition: transform 0.2s; border: 1px solid #e8ede8;
+            background: var(--white); border-radius: 16px; padding: 32px;
+            transition: transform 0.25s, box-shadow 0.25s; cursor: default;
         }
-        .product-card:hover { transform: translateY(-4px); }
-        .product-card .icon { font-size: 2rem; margin-bottom: 16px; }
-        .product-card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 8px; }
-        .product-card p { font-size: 0.9rem; color: #555; }
-        .product-card .spec { margin-top: 12px; font-size: 0.85rem; color: #4a7c59; font-weight: 500; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(25,72,54,0.08); }
+        .product-card .emoji { font-size: 2rem; margin-bottom: 16px; }
+        .product-card h3 { font-size: 1rem; font-weight: 700; color: var(--forest); margin-bottom: 8px; }
+        .product-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; }
+        .product-card .sku { display: inline-block; margin-top: 12px; font-size: 0.75rem; color: var(--sage); font-weight: 500; 
+                             padding: 3px 10px; background: rgba(112,123,82,0.1); border-radius: 20px; }
+        .product-card.accent-forest { border-top: 4px solid var(--forest); }
+        .product-card.accent-sage { border-top: 4px solid var(--sage); }
+        .product-card.accent-lime { border-top: 4px solid var(--lime); }
 
-        /* Market section */
-        .markets { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 32px; }
-        .market-item { padding: 24px; background: #fff; border-radius: 12px; border-left: 4px solid #4a7c59; }
-        .market-item h4 { font-weight: 600; margin-bottom: 8px; }
-        .market-item p { font-size: 0.9rem; color: #555; }
+        /* === WHY === */
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+        .why-item { padding: 28px; border-radius: 12px; background: var(--white); }
+        .why-item .icon { font-size: 1.8rem; margin-bottom: 12px; }
+        .why-item h4 { font-size: 0.95rem; font-weight: 700; color: var(--forest); margin-bottom: 6px; }
+        .why-item p { font-size: 0.85rem; color: var(--text-light); }
 
-        /* Stats */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
-        .stat-card { text-align: center; padding: 32px; background: #fff; border-radius: 16px; }
-        .stat-card .num { font-size: 2.5rem; font-weight: 800; color: #4a7c59; }
-        .stat-card .label { font-size: 0.9rem; color: #666; margin-top: 4px; }
+        /* === BRAND STORY === */
+        .story { background: var(--forest); color: var(--white); padding: 80px 0; }
+        .story .container { max-width: 800px; text-align: center; }
+        .story h2 { font-size: 2rem; font-weight: 800; margin-bottom: 16px; }
+        .story p { font-size: 1rem; opacity: 0.85; margin-bottom: 12px; line-height: 1.7; }
+        .story .dots { display: flex; justify-content: center; gap: 40px; margin-top: 40px; }
+        .story .dot-item { text-align: center; }
+        .story .dot-item .circle { width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.1); 
+                                   display: flex; align-items: center; justify-content: center; margin: 0 auto 8px;
+                                   font-size: 1.5rem; }
+        .story .dot-item .label { font-size: 0.85rem; font-weight: 500; }
 
-        /* Contact */
+        /* === SPECS SAMPLE (table) === */
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+        .specs-table th { background: var(--forest); color: var(--white); padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.85rem; }
+        .specs-table td { padding: 10px 16px; font-size: 0.85rem; border-bottom: 1px solid rgba(25,72,54,0.06); }
+        .specs-table tr:nth-child(even) td { background: rgba(112,123,82,0.04); }
+
+        /* === CONTACT === */
         .contact-form { max-width: 480px; }
         .form-group { margin-bottom: 16px; }
-        .form-group label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; color: #333; }
+        .form-group label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 4px; color: var(--forest); }
         .form-group input, .form-group select, .form-group textarea {
-            width: 100%; padding: 12px 16px; border: 1px solid #d0d5d0; border-radius: 8px;
-            font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff;
+            width: 100%; padding: 12px 16px; border: 1px solid rgba(25,72,54,0.15); border-radius: 10px;
+            font-family: var(--font); font-size: 0.9rem; background: var(--white);
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--forest);
         }
         .form-group textarea { height: 100px; resize: vertical; }
 
-        /* Footer */
-        .footer { background: #1a3a2e; color: rgba(255,255,255,0.7); padding: 40px 0; font-size: 0.85rem; }
-        .footer a { color: #a8e6a1; text-decoration: none; }
+        /* === FOOTER === */
+        .footer { background: var(--forest); color: rgba(255,255,255,0.7); padding: 48px 0 32px; }
+        .footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
+        .footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer a:hover { color: var(--white); }
+        .footer .copyright { width: 100%; text-align: center; margin-top: 32px; font-size: 0.8rem; opacity: 0.5; }
+        .footer .tagline { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
 
-        /* Responsive */
+        /* === RESPONSIVE === */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero { padding: 60px 0 40px; }
+            .hero .container { grid-template-columns: 1fr; gap: 32px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero { padding: 40px 0; min-height: auto; }
+            .header-nav { display: none; }
             section { padding: 48px 0; }
+            .container { padding: 0 20px; }
+            .story .dots { flex-direction: column; gap: 20px; }
         }
-
-        /* Brand badge */
-        .brand { margin-bottom: 40px; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
-        .brand span { color: #a8e6a1; }
-        .brand small { font-size: 0.7rem; font-weight: 400; opacity: 0.6; display: block; }
     </style>
 </head>
 <body>
 
-<!-- Hero -->
-<header class="hero">
+<div class="blob-bg"></div>
+<div class="blob-bg-2"></div>
+
+<!-- === HEADER === -->
+<header class="header">
     <div class="container">
-        <div class="brand">🌱 Happy Peaple<small>by Trinitee Partnerships</small></div>
-        <div class="hero-tag">📍 FOB Qingdao · Supply from China</div>
-        <h1>Premium Pea Protein<br><span>Ingredients for Asia</span></h1>
-        <p>Happy Peaple delivers high-purity pea protein isolate, starch, fiber and hydrolyzed protein — manufactured in China, supplied globally by Trinitee Partnerships, Singapore.</p>
-        <a href="#contact" class="btn btn-primary">Request a sample →</a>
-        <a href="#products" class="btn btn-outline" style="margin-left:12px;">See products</a>
+        <a href="/" class="header-logo">
+            <img src="logo.png" alt="Happy Peaple">
+        </a>
+        <nav class="header-nav">
+            <a href="#products">Products</a>
+            <a href="#why">Why Pea</a>
+            <a href="#story">Our Brand</a>
+            <a href="#specs">Specs</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </div>
 </header>
 
-<!-- Products -->
+<!-- === HERO === -->
+<section class="hero">
+    <div class="container">
+        <div>
+            <div class="section-label">Premium Pea Protein Ingredients</div>
+            <h1>
+                <span class="happy">Happy</span>
+                <span class="peaple">Peaple</span>
+            </h1>
+            <p class="tagline">premium reliability made simple</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">Request a sample →</a>
+                <a href="#products" class="btn btn-outline">Explore products</a>
+            </div>
+            <p class="sub-text">
+                Supplied by Trinitee Partnerships · Singapore<br>
+                Manufacturer: Jianyuan · Qingdao, China<br>
+                FOB Qingdao · Serving Asia &amp; global markets
+            </p>
+        </div>
+        <div class="hero-right">
+            <div class="blob-accent"></div>
+            <img src="logo.png" alt="Happy Peaple brand mark" style="max-width:350px">
+        </div>
+    </div>
+</section>
+
+<!-- === PRODUCTS === -->
 <section id="products">
     <div class="container">
-        <h2 class="section-title">Our Product Range</h2>
-        <p class="section-subtitle">Vertically integrated supply from China's leading pea protein manufacturer. Competitive FOB Qingdao pricing, flexible MOQ.</p>
+        <div class="section-label">Our Range</div>
+        <h2 class="section-title">Complete pea protein portfolio</h2>
+        <p class="section-subtitle">From high-purity isolate to functional fiber — every product is traceable from Qingdao to your door.</p>
         <div class="products-grid">
-            <div class="product-card">
-                <div class="icon">🧪</div>
-                <h3>Pea Protein Isolate 80/85</h3>
-                <p>High-purity protein isolate (80–85%) for meat alternatives, dairy analogs, and nutritional supplements. Excellent emulsification and binding properties.</p>
-                <div class="spec">Protein ≥80% · Fat ≤1.5% · pH 6.0–7.5</div>
+            <div class="product-card accent-forest">
+                <div class="emoji">🔬</div>
+                <h3>Happy Pea Protein 80</h3>
+                <p>High-purity pea protein isolate (80%). Excellent emulsification and binding. Ideal for meat alternatives, dairy analogs and nutritional bars.</p>
+                <div class="sku">HP-PP-80</div>
             </div>
-            <div class="product-card">
-                <div class="icon">🌾</div>
-                <h3>Pea Starch</h3>
-                <p>Functional starch for texturizing, binding, and film-forming in snacks, confectionery, and processed foods.</p>
-                <div class="spec">Starch ≥85% · Fine powder · Neutral taste</div>
+            <div class="product-card accent-forest">
+                <div class="emoji">🧪</div>
+                <h3>Happy Pea Protein 85</h3>
+                <p>Premium pea protein isolate (85%). Higher protein content for concentrated formulations. Optimized for sports nutrition and premium plant-based products.</p>
+                <div class="sku">HP-PP-85</div>
             </div>
-            <div class="product-card">
-                <div class="icon">🧶</div>
-                <h3>Pea Fiber</h3>
-                <p>Dietary fiber for clean-label formulation, improved texture, and nutritional enhancement in baked goods and meat products.</p>
-                <div class="spec">TDF ≥80% · Fine grind · Clean label</div>
+            <div class="product-card accent-forest">
+                <div class="emoji">💧</div>
+                <h3>Happy Pea Hydro Protein</h3>
+                <p>Enzymatically hydrolyzed for superior solubility across all pH levels. Crystal-clear solutions. Perfect for RTD beverages and juice fortification.</p>
+                <div class="sku">HP-HPP</div>
             </div>
-            <div class="product-card">
-                <div class="icon">💧</div>
-                <h3>Hydrolyzed Pea Protein</h3>
-                <p>Enzymatically hydrolyzed for high solubility across all pH levels. Ideal for clear protein beverages, sports nutrition, and juice fortification.</p>
-                <div class="spec">Clear solution · Low bitterness · pH 3–7 stable</div>
+            <div class="product-card accent-lime">
+                <div class="emoji">🌾</div>
+                <h3>Happy Pea Starch</h3>
+                <p>Functional pea starch for texturizing and binding. Two grades: Native (HP-PS-N) and Pregelatinized (HP-PS-PG) for different processing needs.</p>
+                <div class="sku">HP-PS-N / HP-PS-PG</div>
+            </div>
+            <div class="product-card accent-sage">
+                <div class="emoji">🧶</div>
+                <h3>Happy Pea Fiber 40</h3>
+                <p>Dietary fiber for clean-label formulation. Improves texture and nutritional profile in baked goods, meat products and snacks.</p>
+                <div class="sku">HP-PF-40</div>
+            </div>
+            <div class="product-card accent-sage">
+                <div class="emoji">🧶</div>
+                <h3>Happy Pea Fiber 60 &amp; Fine</h3>
+                <p>Higher fiber content (60%) and ultra-fine grade (80–100 mesh) for premium applications requiring smooth texture and maximum fiber enrichment.</p>
+                <div class="sku">HP-PF-60 / HP-PF-FINE</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Market -->
-<section class="bg-light">
+<!-- === WHY PEA === -->
+<section id="why" style="background: rgba(255,255,255,0.4);">
     <div class="container">
-        <h2 class="section-title">Why Pea Protein?</h2>
-        <p class="section-subtitle">Pea protein is the fastest-growing plant protein globally. Allergen-free, non-GMO, sustainably sourced.</p>
-        <div class="markets">
-            <div class="market-item">
-                <h4>🌱 Plant-Based Meat</h4>
-                <p>Meat alternatives, nuggets, burgers, meatballs — pea protein delivers texture and nutrition without soy or wheat allergens.</p>
+        <div class="section-label">Why Pea Protein</div>
+        <h2 class="section-title">The smart choice for formulators</h2>
+        <p class="section-subtitle">Allergen-free, non-GMO, sustainably sourced. Pea protein is the fastest-growing plant protein globally — and for good reason.</p>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="icon">🌱</div>
+                <h4>Plant-Based Meat</h4>
+                <p>Meat alternatives, nuggets, patties — pea protein delivers texture and nutrition without soy or wheat allergens.</p>
             </div>
-            <div class="market-item">
-                <h4>🥤 Beverages & Sport Nutrition</h4>
-                <p>Clear protein drinks, RTD shakes, recovery beverages. Hydrolyzed pea protein enables transparent, shelf-stable formulations.</p>
+            <div class="why-item">
+                <div class="icon">🥤</div>
+                <h4>Beverages</h4>
+                <p>Clear protein drinks, RTD formulations. Hydrolyzed grade enables transparent, shelf-stable beverages.</p>
             </div>
-            <div class="market-item">
-                <h4>🧀 Dairy Alternatives</h4>
+            <div class="why-item">
+                <div class="icon">🧀</div>
+                <h4>Dairy Alternatives</h4>
                 <p>Yogurt, ice cream, cheese analogs — excellent emulsification and creamy mouthfeel without dairy.</p>
             </div>
-            <div class="market-item">
-                <h4>🍫 Snacks & Bakery</h4>
-                <p>Protein bars, extruded snacks, baked goods — high protein content with neutral flavor profile.</p>
+            <div class="why-item">
+                <div class="icon">🍫</div>
+                <h4>Snacks & Bakery</h4>
+                <p>Protein bars, extruded snacks, baked goods — high protein with neutral flavor profile.</p>
             </div>
-            <div class="market-item">
-                <h4>🐟 Feed & Pet Food</h4>
+            <div class="why-item">
+                <div class="icon">🐟</div>
+                <h4>Feed & Pet Food</h4>
                 <p>Premium pet food, aquaculture, poultry feed — consistent quality at competitive bulk pricing.</p>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Stats -->
-<section>
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="num">12K+</div>
-                <div class="label">Metric tons annual capacity</div>
-            </div>
-            <div class="stat-card">
-                <div class="num">80%+</div>
-                <div class="label">Protein purity (isolate)</div>
-            </div>
-            <div class="stat-card">
-                <div class="num">5+</div>
-                <div class="label">Product grades available</div>
-            </div>
-            <div class="stat-card">
-                <div class="num">🌏</div>
-                <div class="label">Serving Asia from Singapore</div>
+            <div class="why-item">
+                <div class="icon">💪</div>
+                <h4>Sports Nutrition</h4>
+                <p>Whey alternative for vegan sports nutrition. Hydrolyzed for fast absorption, clear formulation.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Contact -->
-<section class="bg-light" id="contact">
+<!-- === BRAND STORY === -->
+<section class="story" id="story">
     <div class="container">
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">Request a spec sheet, sample, or pricing. We'll respond within 24 hours.</p>
+        <h2>The Happy Peaple promise</h2>
+        <p>Three dots. Three meanings. One standard of excellence.</p>
+        <p style="font-size:0.9rem; opacity:0.7">Every pea is valuable. Every partnership matters. Every product delivers.</p>
+        <div class="dots">
+            <div class="dot-item">
+                <div class="circle">🌿</div>
+                <div class="label">The Pod</div>
+                <p style="font-size:0.8rem; opacity:0.6">The vessel of the yellow pea — our source</p>
+            </div>
+            <div class="dot-item">
+                <div class="circle">🤝</div>
+                <div class="label">The Hug</div>
+                <p style="font-size:0.8rem; opacity:0.6">Three partners standing together — our strength</p>
+            </div>
+            <div class="dot-item">
+                <div class="circle">😊</div>
+                <div class="label">The Smile</div>
+                <p style="font-size:0.8rem; opacity:0.6">The result of uncompromising quality — our promise</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- === SPECS SAMPLE === -->
+<section id="specs">
+    <div class="container">
+        <div class="section-label">Technical Data</div>
+        <h2 class="section-title">Specifications at a glance</h2>
+        <p class="section-subtitle">Full TDS, COA and MSDS available on request. Below: typical values for our flagship products.</p>
+        <table class="specs-table">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Pea Protein 80</th>
+                    <th>Pea Protein 85</th>
+                    <th>Hydro Protein</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Protein (N×6.25)</td><td>≥80%</td><td>≥85%</td><td>≥80%</td></tr>
+                <tr><td>Fat</td><td>≤1.5%</td><td>≤1.0%</td><td>≤1.0%</td></tr>
+                <tr><td>Moisture</td><td>≤8%</td><td>≤8%</td><td>≤7%</td></tr>
+                <tr><td>pH (10% solution)</td><td>6.0–7.5</td><td>6.0–7.5</td><td>5.5–7.0</td></tr>
+                <tr><td>Solubility</td><td>>80% (neutral)</td><td>>80% (neutral)</td><td>>95% (pH 3–7)</td></tr>
+                <tr><td>Appearance</td><td colspan="2">Fine powder, light yellow</td><td>Fine powder, light cream</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- === CONTACT === -->
+<section id="contact" style="background: rgba(255,255,255,0.4);">
+    <div class="container">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Start the conversation</h2>
+        <p class="section-subtitle">Request a spec sheet, sample or pricing. We typically respond within 24 hours.</p>
         <div class="contact-form">
             <form action="https://formspree.io/f/xjkyqllr" method="POST">
                 <div class="form-group">
-                    <label>Full Name</label>
+                    <label>Full name</label>
                     <input type="text" name="name" required>
                 </div>
                 <div class="form-group">
@@ -213,9 +384,9 @@
                     <input type="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label>Country</label>
+                    <label>Country / Region</label>
                     <select name="country">
-                        <option value="">Select your region</option>
+                        <option value="">— Select —</option>
                         <option>Indonesia</option>
                         <option>Malaysia</option>
                         <option>Vietnam</option>
@@ -225,23 +396,26 @@
                         <option>China</option>
                         <option>India</option>
                         <option>Other Asia</option>
-                        <option>Other (non-Asia)</option>
+                        <option>Europe</option>
+                        <option>North America</option>
+                        <option>Other</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>I'm interested in</label>
+                    <label>Product interest</label>
                     <select name="product">
-                        <option value="">Select product</option>
-                        <option>Pea Protein Isolate 80/85</option>
-                        <option>Pea Starch</option>
-                        <option>Pea Fiber</option>
-                        <option>Hydrolyzed Pea Protein</option>
+                        <option value="">— Select —</option>
+                        <option>Happy Pea Protein 80</option>
+                        <option>Happy Pea Protein 85</option>
+                        <option>Happy Pea Hydro Protein</option>
+                        <option>Happy Pea Starch</option>
+                        <option>Happy Pea Fiber</option>
                         <option>Multiple / Not sure</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Message / Estimated Volume</label>
-                    <textarea name="message" placeholder="Tell us about your application and approximate monthly volume (tons)..."></textarea>
+                    <label>Message / Estimated monthly volume (tons)</label>
+                    <textarea name="message" placeholder="Tell us about your application and approximate volume..."></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send enquiry →</button>
             </form>
@@ -249,14 +423,30 @@
     </div>
 </section>
 
-<!-- Footer -->
+<!-- === FOOTER === -->
 <footer class="footer">
     <div class="container">
-        <div class="brand" style="margin-bottom:16px">🌱 Happy Peaple<small style="color:rgba(255,255,255,0.4)">by Trinitee Partnerships Pte. Ltd.</small></div>
-        <p>Singapore Business Federation Center<br>
-        160 Robinson Road, #14-04, Singapore 068914</p>
-        <p style="margin-top:12px">🌐 <a href="#">Trinitee Partnerships</a></p>
-        <p style="margin-top:24px; font-size:0.8rem; opacity:0.5">© 2026 Trinitee Partnerships. All rights reserved. Happy Peaple is a trademark of Trinitee Partnerships.</p>
+        <div>
+            <p class="tagline">🌱 Happy Peaple</p>
+            <p style="font-size:0.85rem; opacity:0.6">by Trinitee Partnerships Pte. Ltd.</p>
+            <p style="font-size:0.8rem; margin-top:8px; opacity:0.5">
+                Singapore Business Federation Center<br>
+                160 Robinson Road, #14-04<br>
+                Singapore 068914
+            </p>
+        </div>
+        <div>
+            <p style="font-size:0.85rem; font-weight:600; color:var(--white); margin-bottom:8px">Quick links</p>
+            <p><a href="#products">Products</a></p>
+            <p><a href="#specs">Specifications</a></p>
+            <p><a href="#contact">Contact</a></p>
+            <p><a href="https://www.trinitee-partnerships.com" target="_blank">Trinitee Partnerships</a></p>
+        </div>
+        <div class="copyright">
+            © 2026 Trinitee Partnerships Pte. Ltd.<br>
+            Happy Peaple is a trademark of Trinitee Partnerships.<br>
+            <a href="https://www.happypeaple.com" style="opacity:0.6">www.happypeaple.com</a> — premium reliability made simple
+        </div>
     </div>
 </footer>
 
