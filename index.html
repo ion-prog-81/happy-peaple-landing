@@ -408,7 +408,7 @@ dots.forEach(dot=>{
   dot.addEventListener('click',()=>showSlide(parseInt(dot.dataset.slide)));
 });
 // Auto-rotate every 6s
-setInterval(()=>showSlide((currentSlide+1)%slides.length),6000);
+setInterval(()=>showSlide((currentSlide+1)%slides.length),15000);
 
 // Scroll reveal
 const observer=new IntersectionObserver(e=>{
