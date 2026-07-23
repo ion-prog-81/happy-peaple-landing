@@ -10,7 +10,7 @@
 <style>:root{--cream:#F0EDE2;--forest:#194836;--sage:#707B52;--lime:#B9D48B;--white:#FFFFFF;--text:#1A1A1A;--text-light:#6B6B6B;--trinitee-navy:#0F2841;--trinitee-amber:#D69E2E;--font-display:'Montserrat','Helvetica Neue',sans-serif;--font-body:'Inter','Helvetica Neue',sans-serif;--radius:12px;--shadow:0 4px 24px rgba(25,72,54,0.08);--ease:cubic-bezier(0.16,1,0.3,1)}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);background:var(--cream);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}.container{max-width:1200px;margin:0 auto;padding:0 32px}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease)}.reveal.visible{opacity:1;transform:translateY(0)}@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 .header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(240,237,226,0.95);backdrop-filter:blur(12px);box-shadow:0 1px 8px rgba(0,0,0,0.06)}.header .container{display:flex;align-items:center;justify-content:space-between}
-.header-logo{display:flex;align-items:center;gap:12px;text-decoration:none}.header-logo img{height:40px}.header-nav{display:flex;gap:28px;align-items:center}.header-nav a{text-decoration:none;color:var(--text);font-family:var(--font-display);font-size:0.82rem;font-weight:500;transition:color 0.2s}.header-nav a:hover{color:var(--forest)}.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--forest);text-decoration:none;font-weight:500;font-size:0.9rem;margin-bottom:24px}.back-link:hover{gap:10px}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 0;background:rgba(240,237,226,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 8px rgba(0,0,0,.06);transition:background .4s,box-shadow .4s,padding .3s}.header.scrolled{background:rgba(240,237,226,.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 12px rgba(0,0,0,.08);padding:8px 0}.header__inner{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:32px}.header__logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}.header__logo img{height:36px;width:auto;transition:height .3s}.header.scrolled .header__logo img{height:32px}.header__nav{display:flex;align-items:center;gap:24px;margin:0 auto}.header__nav a{text-decoration:none;color:var(--text);font-family:var(--font-display);font-size:.82rem;font-weight:500;transition:color .2s;position:relative}.header__nav a::after{content:"";position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--forest);transition:width .3s var(--ease)}.header__nav a:hover::after,.header__nav a:hover{width:100%;color:var(--forest)}.header__cta{background:var(--forest);color:#fff!important;padding:10px 24px;border-radius:50px;font-family:var(--font-display);font-weight:600;font-size:.82rem;text-decoration:none;transition:all .3s var(--ease);white-space:nowrap;flex-shrink:0}.header__cta:hover{background:#1a3a2e;transform:translateY(-1px);box-shadow:0 4px 12px rgba(25,72,54,.2)}.header__mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--forest);padding:4px}@media(max-width:768px){.header__nav{display:none;position:fixed;top:60px;left:0;right:0;background:var(--cream);flex-direction:column;padding:24px;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,.1)}.header__nav.open{display:flex}.header__cta{display:none}.header__cta.mobile-visible{display:inline-flex;margin-top:8px}.header__mobile-toggle{display:block}.header__inner{padding:0 20px}}
 .hero{background:linear-gradient(135deg,#9bb87a,#7a9e5e);color:#fff;padding:120px 0 60px}.hero h1{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,3rem);font-weight:900;line-height:1.1;margin-bottom:12px}.hero .sku{display:inline-block;background:rgba(255,255,255,0.15);padding:4px 14px;border-radius:20px;font-size:0.8rem;margin-bottom:16px}.hero p{font-size:1rem;opacity:0.85;max-width:600px}
 section{padding:80px 0}.section-title{font-family:var(--font-display);font-size:clamp(1.3rem,2vw,1.8rem);font-weight:800;color:var(--forest);margin-bottom:16px}.section-sub{color:var(--text-light);margin-bottom:32px;max-width:600px}
 .product-img{width:100%;border-radius:var(--radius);margin-bottom:32px;max-height:400px;object-fit:cover}
@@ -20,15 +20,19 @@ section{padding:80px 0}.section-title{font-family:var(--font-display);font-size:
 @media(max-width:768px){.footer .container{grid-template-columns:1fr 1fr;gap:24px}.container{padding:0 20px}.footer .container{grid-template-columns:1fr;gap:24px}.hero{padding:100px 0 40px}section{padding:48px 0}}
 .footer{background:var(--navy);color:rgba(255,255,255,.7);padding:48px 0 32px}.footer .container{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;align-items:start}.footer h4{font-family:var(--font-display);font-size:.85rem;font-weight:600;color:#fff;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}.footer a{color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;font-size:.85rem}.footer a:hover{color:var(--amber)}.footer p{font-size:.82rem;margin-bottom:6px;line-height:1.5}.footer .footer-logo{display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}.footer .footer-logo img{height:36px;width:auto}.footer .footer-logo .brand-text{font-family:var(--font-display);font-weight:700;font-size:1rem;color:#fff;line-height:1.3}.footer .footer-logo .brand-text small{display:block;font-weight:400;font-size:.65rem;opacity:.5;line-height:1.3}.footer .copyright{grid-column:1/-1;text-align:center;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;opacity:.5}.footer .copyright a{font-size:.78rem}</style></head>
 <body>
-<header class="header">
-  <div class="container">
-    <a href="/" class="header-logo"><img src="logo.png" alt="Happy Peaple"></a>
-    <nav class="header-nav">
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="/" class="header__logo">
+      <img src="logo.png" alt="Happy Peaple">
+    </a>
+    <nav class="header__nav" id="headerNav">
       <a href="index.html#products">Products</a>
-      <a href="index.html#applications">Applications</a>
-      <a href="index.html#story">Our Brand</a>
+      <a href="index.html#apps">Applications</a>
+      <a href="index.html#story">Brand</a>
       <a href="index.html#contact">Contact</a>
     </nav>
+    <a href="index.html#contact" class="header__cta">Request a Sample</a>
+    <button class="header__mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
   </div>
 </header>
 
@@ -97,7 +101,7 @@ section{padding:80px 0}.section-title{font-family:var(--font-display);font-size:
       <p>Singapore Business Federation Center<br>160 Robinson Road, #14-04<br>Singapore 068914</p>
       <p style="margin-top:12px">
         📞 <a href="tel:+6563108451">+65 6310 8451</a><br>
-        ✉️ <a href="mailto:info-partnerships.com">info-partnerships.com</a>
+        ✉️ <a href="mailto:info@trinitee-partnerships.com">info@trinitee-partnerships.com</a>
       </p>
     </div>
     <div>
@@ -105,7 +109,7 @@ section{padding:80px 0}.section-title{font-family:var(--font-display);font-size:
       <p><a href="protein.html">Happy Pea Protein 80/85</a></p>
       <p><a href="starch.html">Happy Pea Starch</a></p>
       <p><a href="fiber.html">Happy Pea Fiber</a></p>
-      <p><a href="hydro.html">Hydrolyzed Protein</a></p>
+      <p><a href="hydro.html">Happy Pea Hydro Protein</a></p>
     </div>
     <div>
       <h4>Applications</h4>
@@ -128,6 +132,12 @@ section{padding:80px 0}.section-title{font-family:var(--font-display);font-size:
   </div>
 </footer>
 
+
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>80)});
+document.getElementById('mobileToggle').addEventListener('click',()=>{document.getElementById('headerNav').classList.toggle('open')});
+document.querySelectorAll('.header__nav a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('headerNav').classList.remove('open'))});
 <script>
 const observer = new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target))})},{threshold:.08});
 document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
