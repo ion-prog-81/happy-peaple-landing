@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F0EDE2"/>
+  <path d="M200,40 C260,40 320,80 350,140 C380,200 370,270 330,320 C290,370 230,390 180,370 C130,350 80,310 60,260 C40,210 30,160 60,110 C90,60 140,40 200,40Z" fill="#194836" opacity="0.15"/>
+  <path d="M210,60 C260,60 310,95 335,145 C360,195 355,255 320,300 C285,345 235,365 190,345 C145,325 100,290 80,245 C60,200 55,155 80,110 C105,65 160,60 210,60Z" fill="#194836" opacity="0.1"/>
+  <g transform="translate(130,80)">
+    <circle cx="70" cy="70" r="10" fill="#194836" opacity="0.25"/>
+    <circle cx="70" cy="70" r="5" fill="#194836" opacity="0.5"/>
+    <circle cx="105" cy="45" r="7" fill="#194836" opacity="0.2"/>
+    <circle cx="105" cy="45" r="3.5" fill="#194836" opacity="0.4"/>
+    <circle cx="35" cy="60" r="8" fill="#194836" opacity="0.2"/>
+    <circle cx="35" cy="60" r="4" fill="#194836" opacity="0.4"/>
+    <circle cx="80" cy="125" r="9" fill="#194836" opacity="0.2"/>
+    <circle cx="80" cy="125" r="4.5" fill="#194836" opacity="0.4"/>
+    <circle cx="50" cy="35" r="6" fill="#194836" opacity="0.15"/>
+    <circle cx="50" cy="35" r="3" fill="#194836" opacity="0.3"/>
+    <circle cx="120" cy="105" r="6" fill="#194836" opacity="0.15"/>
+    <circle cx="120" cy="105" r="3" fill="#194836" opacity="0.3"/>
+    <line x1="70" y1="80" x2="80" y2="125" stroke="#194836" stroke-width="2" opacity="0.2"/>
+    <line x1="70" y1="80" x2="50" y2="35" stroke="#194836" stroke-width="2" opacity="0.2"/>
+    <line x1="70" y1="80" x2="105" y2="45" stroke="#194836" stroke-width="2" opacity="0.2"/>
+    <line x1="70" y1="80" x2="35" y2="60" stroke="#194836" stroke-width="2" opacity="0.2"/>
+    <line x1="105" y1="45" x2="120" y2="105" stroke="#194836" stroke-width="2" opacity="0.15"/>
+    <line x1="35" y1="60" x2="50" y2="35" stroke="#194836" stroke-width="2" opacity="0.15"/>
+  </g>
+  <path d="M0,350 Q100,320 200,350 Q300,380 400,350 L400,400 L0,400Z" fill="#194836" opacity="0.08"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F0EDE2"/>
+  <path d="M190,20 C260,20 330,60 360,130 C390,200 380,270 330,320 C280,370 210,380 150,350 C90,320 50,270 35,210 C20,150 30,90 80,50 C130,10 160,20 190,20Z" fill="#707B52" opacity="0.18"/>
+  <path d="M200,40 C260,40 315,75 345,135 C375,195 365,255 320,305 C275,355 215,370 160,345 C105,320 65,275 50,220 C35,165 45,115 90,75 C135,35 165,40 200,40Z" fill="#707B52" opacity="0.1"/>
+  <g transform="translate(100,70)">
+    <path d="M10,30 Q30,10 50,30 Q70,50 90,30 Q110,10 130,30" stroke="#707B52" stroke-width="4" fill="none" opacity="0.25" stroke-linecap="round"/>
+    <path d="M10,58 Q30,38 50,58 Q70,78 90,58 Q110,38 130,58" stroke="#707B52" stroke-width="4" fill="none" opacity="0.18" stroke-linecap="round"/>
+    <path d="M10,86 Q30,66 50,86 Q70,106 90,86 Q110,66 130,86" stroke="#707B52" stroke-width="4" fill="none" opacity="0.12" stroke-linecap="round"/>
+    <path d="M10,114 Q30,94 50,114 Q70,134 90,114 Q110,94 130,114" stroke="#707B52" stroke-width="3" fill="none" opacity="0.08" stroke-linecap="round"/>
+  </g>
+  <path d="M0,345 Q100,315 200,345 Q300,375 400,345 L400,400 L0,400Z" fill="#707B52" opacity="0.08"/>
+</svg>
