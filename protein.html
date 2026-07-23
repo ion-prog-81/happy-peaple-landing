@@ -142,6 +142,7 @@ const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>80)});
 document.getElementById('mobileToggle').addEventListener('click',()=>{document.getElementById('headerNav').classList.toggle('open')});
 document.querySelectorAll('.header__nav a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('headerNav').classList.remove('open'))});
+</script>
 <script>
 const observer = new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add('visible'),observer.unobserve(e.target))})},{threshold:.08});
 document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
